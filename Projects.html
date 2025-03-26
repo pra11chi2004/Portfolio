@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="icon" href="image/prachiimg.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="Projects.css">
+    <style>
+      
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="Resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <h1>My Projects</h1>
+
+    <!-- Project Cards -->
+    <div class="projects-container">
+        <div class="project-card">
+            <h2>Airline Reservation System</h2>
+            <p>Developed a user-friendly interface for flight booking using HTML, CSS, JavaScript, and MySQL.</p>
+        </div>
+        <div class="project-card">
+            <h2>Nursery Management System</h2>
+            <p>Designed a database to manage plant inventory and customer orders using MySQL.</p>
+        </div>
+        <div class="project-card">
+            <h2>Portfolio Website</h2>
+            <p>Created a personal portfolio website using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="project-card">
+            <h2>Coding Academy Platform</h2>
+            <p>Developed an online learning platform using Node.js, Express.js, MongoDB, and API fetching.</p>
+        </div>
+        <div class="project-card">
+            <h2>Rock Paper Scissors Game</h2>
+            <p> mini project Rock Paper Scissors game built with HTML, CSS, and JavaScript. The game allows users to play against the computer, with the winner determined based on standard rules.</p>
+        </div>
+    </div>
+
+    <!-- Carousel for Project Details -->
+    <div class="carousel">
+        <button id="prev">&#10094;</button>
+        <div class="project-slide show">
+            <h2 id="project-title">Airline Reservation System</h2>
+            <p id="project-desc">An intuitive flight booking system with dynamic seat selection and real-time data updates.</p>
+            <p id="project-tech">Tech Used: HTML, CSS, JavaScript, MySQL</p>
+            <a id="github-link" href="https://github.com/yourusername/airline-reservation" class="github-btn" target="_blank">View on GitHub</a>
+        </div>
+        <button id="next">&#10095;</button>
+    </div>
+
+    <script>
+        const projects = [
+            { 
+                title: "Coding Academy Platform", 
+                desc: "An e-learning platform with user authentication, codind courses.",
+                github: "https://github.com/pra11chi2004/ReactApiDatabase.git",
+                tech: "Tech Used: React ,Node.js, Express.js, MongoDB, API Fetching"
+            },
+            { 
+                title: "Rock Paper Scissors Game", 
+                desc: "Creating A mini project of game Rock-Paper-Scissors using Javascript concept with Html,Css",
+                github: "https://github.com/pra11chi2004/Rock-Paper-Scissors-Game.git",
+                tech: "Tech Used: HTML, CSS, JavaScript, MySQL, Bootstrap"
+            },
+            { 
+                title: "Portfolio Website", 
+                desc: "A responsive portfolio showcasing my skills, projects, and achievements.",
+                github: "https://github.com/yourusername/portfolio-website",
+                tech: "Tech Used: HTML, CSS, JavaScript"
+            },
+            { 
+                title: "Airline Reservation System", 
+                desc: "An intuitive flight booking system with dynamic seat selection and real-time data updates.",
+                github: "https://github.com/yourusername/airline-reservation",
+                tech: "Tech Used: HTML, CSS, JavaScript, MySQL,php"
+            },
+            { 
+                title: "Nursery Management System", 
+                desc: "A web-based system to manage plant inventory, track orders, and optimize sales.",
+                github: "https://github.com/yourusername/nursery-management",
+                tech: "Tech Used: HTML, CSS, JavaScript, MySQL, Bootstrap"
+            }
+           
+           
+        ];
+
+        let currentIndex = 0;
+
+        document.getElementById("next").addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % projects.length;
+            updateProject();
+        });
+
+        document.getElementById("prev").addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+            updateProject();
+        });
+
+        function updateProject() {
+            document.getElementById("project-title").innerText = projects[currentIndex].title;
+            document.getElementById("project-desc").innerText = projects[currentIndex].desc;
+            document.getElementById("project-tech").innerText = projects[currentIndex].tech;
+            document.getElementById("github-link").href = projects[currentIndex].github;
+            document.getElementById("github-link").innerText = "View on GitHub";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prachi Marewad - Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="image/prachiimg.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="animated-bg"></div>
+    <header>
+        <div class="container">
+            <img src="image/PrachiMarewad.jpg" alt="Prachi Marewad" class="profile-pic">
+            <h1>Prachi Marewad</h1>
+            <p>I'm a <span id="changing-text">Web Developer</span></p>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Resume.html">Resume</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/prachi-marewad/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/pra11chi2004" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.snapchat.com/add/prachi_marewad" target="_blank">
+                    <i class="fa-brands fa-snapchat"></i>
+                </a>
+                <a href="https://wa.me/9356633024" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/its_prachi_reddy/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                
+            </div>
+            
+        </div>
+    </header>
+    
+    <script>
+        const roles = ["Web Developer", "Full Stack Developer"," Coder","Happy Person","Leader", "Photographer", "Cricketer", "Event Manager"];
+        let index = 0;
+        
+        function changeText() {
+            index = (index + 1) % roles.length;
+            document.getElementById("changing-text").textContent = roles[index];
+        }
+        
+        setInterval(changeText, 3000);
+    </script>
+    
+    <style>
+   
+    </style>
+</body>
+</html>

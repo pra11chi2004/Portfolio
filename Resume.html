@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prachi Marewad - Resume</title>
+    <link rel="stylesheet" href="Resume.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Resume.html">Resume</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="contact.html">Contacts</a></li>
+        </ul>
+    </div>
+    
+    <div class="container">
+        <section id="summary" class="resume-section">
+            <h1>CHECK MY RESUME</h1>
+            <div class="section">
+                <h2>Summary</h2>
+                <p><strong>ABOUT ME</strong></p>
+                <p>Passionate web developer with expertise in HTML, CSS, JavaScript, Bootstrap, and SQL. Currently enhancing React.js skills to create dynamic user interfaces.</p>
+                <ul>
+                    <li>Pune, Maharashtra</li>
+                    <li>(+91) 9356633024</li>
+                    <li>marewadprachi@gmail.com</li>
+                    <li><a href="https://www.linkedin.com/in/prachi-marewad/">LinkedIn</a> | <a href="https://github.com/pra11chi2004">GitHub</a> | <a href="https://leetcode.com/u/prachimarewad/">Leetcode</a> | <a href="https://www.hackerrank.com/profile/marewadprachi">HackerRank</a> |<a href="https://www.geeksforgeeks.org/user/marewadprachi/">GreeksForGreeks</a> </li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <p><strong>B.E. Information Technology</strong> - International Institute of Information Technology, Pune (CGPA: 8.86, 2023 - 2026)</p>
+            <p><strong>Diploma in Computer Engineering</strong> - Government Residential Women’s Polytechnic, Latur (88.40%, 2020 - 2023)</p>
+            <p><strong>SSC</strong> - Shri Mahesh Vidyalaya, Shirur Tajband (93.4%, 2020)</p>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <p><strong>Airline Reservation System</strong> - Designed UI using HTML, CSS, JavaScript, and MySQL (Feb 2023 - Mar 2023).</p>
+            <p><strong>Nursery Management System</strong> - Developed MySQL database structure and queries (Sep 2024 - Nov 2024).</p>
+            <p><strong>Coding Academy Platform</strong> - React,Bootstrap,JavaScript,Mongodb,API Fetch  (jan 2025 - march 2025).</p>
+        </section>
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+            <p><strong>Web Developer</strong> - IEEE I2IT Student Branch (Responsible for website development)</p>
+            <p><strong>Treasurer</strong> - ITSA Club (Managed finances and budgeting for events)</p>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li>Languages: HTML, CSS, JavaScript, C++, Python</li>
+                <li>Frameworks: Bootstrap</li>
+                <li>Databases: MySQL</li>
+                <li>Tools: VS Code, Git/GitHub, Jupyter Notebook, Ubuntu, IntelliJ IDEA</li>
+            </ul>
+        </section>
+
+        <section id="certifications" class="section">
+            <h2>Certifications</h2>
+            <p>HTML, CSS (Great Learning)</p>
+            <p>JavaScript (Infosys Springboard)</p>
+            <p>React.js (Lets-Upgrade)</p>
+            <p>SQL (HackerRank - 5-star badge)</p>
+        </section>
+
+        
+
+        <section id="achievements" class="section">
+            <h2>Achievements</h2>
+            <p>LPF (Lila Poonawalla Foundation) Scholarship Recipient.</p>
+            <p>Secured a 5-star badge in SQL from HackerRank.</p>
+        </section>
+
+        <section id="view-resume" class="file-section">
+            <h2>View My Resume</h2>
+            <button class="view-btn" id="view-resume-btn">View Resume</button>
+            <iframe id="resume-viewer" src="Prachi_Marewad_Resume.pdf" width="100%" height="500px" style="display:none;"></iframe>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById('view-resume-btn').addEventListener('click', function() {
+            document.getElementById('resume-viewer').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
