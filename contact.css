@@ -13,33 +13,6 @@ body {
   animation: gradientMove 10s ease infinite;
   z-index: -1;
 }
-.social-icons {
-  text-align: center;
-  margin-top: 20px;
-}
-.social-icons a {
-  display: inline-block;
-  margin: 10px;
-  font-size: 30px;
-  color: white;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease, color 0.3s ease, background 0.3s ease;
-}
-.social-icons a:hover {
-  color: #00ff7f;
-  transform: scale(1.2);
-  background: rgba(255, 255, 255, 0.2);
-}
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
 nav {
   background: rgba(0, 0, 0, 0.9);
   padding: 15px;
@@ -50,13 +23,14 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 nav a {
   color: white;
-  margin: 15px;
+  margin: 10px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.2rem;
   transition: color 0.3s, transform 0.3s;
 }
 nav a:hover {
@@ -70,7 +44,7 @@ nav a:hover {
   text-align: center;
 }
 h1 {
-  font-size: 36px;
+  font-size: 5vw;
   text-transform: uppercase;
   letter-spacing: 2px;
   background: linear-gradient(90deg, #00ff7f, cyan);
@@ -79,9 +53,24 @@ h1 {
   margin-top: 20px;
   animation: fadeIn 1.5s ease-in-out;
 }
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.social-icons a {
+  font-size: 2rem;
+  color: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, color 0.3s ease, background 0.3s ease;
 }
 .contact-form {
   background: rgba(0, 0, 0, 0.85);
@@ -93,9 +82,8 @@ h1 {
   width: 90%;
   max-width: 500px;
   margin: 50px auto;
-}
-.contact-form:hover {
-  transform: scale(1.05);
+  display: flex;
+  flex-direction: column;
 }
 .contact-form input,
 .contact-form textarea {
@@ -108,71 +96,62 @@ h1 {
   color: white;
   outline: none;
   transition: all 0.3s;
-  font-size: 16px;
-}
-.contact-form input:focus,
-.contact-form textarea:focus {
-  background: #333;
-  box-shadow: 0px 0px 10px #00ff7f;
-}
-.contact-form button {
-  background: #00ff7f;
-  color: black;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  width: 48%;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: background 0.3s, transform 0.2s;
-  margin: 5px;
-}
-.contact-form button:hover {
-  background: cyan;
-  transform: scale(1.05);
+  font-size: 1rem;
 }
 .contact-form .cancel-btn {
   background: red;
   color: white;
 }
-.contact-form .cancel-btn:hover {
-  background: darkred;
-}
-.contact-details {
-  text-align: center;
-  font-size: 16px;
-  margin-top: 20px;
-}
-.contact-details i {
-  margin-right: 8px;
-  color: cyan;
-}
-.contact-details a {
-  text-decoration: none;
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00ff7f;
+  font-size: 1rem;
   color: white;
-  margin-left: 5px;
 }
-.contact-details a:hover {
-  color: #ff7f50;
-}
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 6vw;
+  }
+
   .contact-form {
     width: 95%;
     padding: 20px;
   }
-  h1 {
-    font-size: 28px;
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 10px;
   }
   nav a {
-    font-size: 18px;
-    margin: 10px;
+    font-size: 1rem;
+    margin: 8px;
+  }
+  h1 {
+    font-size: 7vw;
   }
   .social-icons a {
-    font-size: 25px;
+    font-size: 1.5rem;
     width: 40px;
     height: 40px;
-    line-height: 40px;
   }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 8vw;
+  }
+  .contact-form {
+    padding: 15px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+  }
+  .social-icons a {
+    font-size: 1.3rem;
+    width: 35px;
+    height: 35px;
+  }
+ 
 }
