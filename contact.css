@@ -176,3 +176,42 @@ h1 {
     line-height: 40px;
   }
 }
+/* For mobile phones (480px and below) */
+@media (max-width: 480px) {
+  .container {
+    padding: 50px 10px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  nav a {
+    font-size: 16px;
+    margin: 8px;
+  }
+  
+  .contact-form {
+    padding: 15px;
+    width: 95%;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+  
+  .contact-form button {
+    font-size: 14px;
+    padding: 8px;
+  }
+  
+  .social-icons a {
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    margin: 5px;
+  }
+}

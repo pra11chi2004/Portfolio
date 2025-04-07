@@ -160,3 +160,45 @@ button:hover {
         padding: 8px;
     }
 }
+@media (max-width: 480px) {
+    /* Overall adjustments for smaller screens */
+    body {
+      font-size: 0.9rem;  /* Slightly reduce the base font size */
+      padding: 5px;
+    }
+    
+    /* Header: Adjust spacing and heading size if needed */
+    h1 {
+      font-size: 1.8rem;
+      margin-top: 15px;
+    }
+    
+    /* Navbar: Stack links vertically with a bit more spacing */
+    .navbar ul {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .navbar a {
+      font-size: 16px;  /* Slightly reduce nav link size */
+    }
+    
+    /* Project Cards: Make sure they take full width on very small screens */
+    .project-card {
+      width: 100%;
+      margin: 10px 0;  /* Increase vertical spacing between cards */
+    }
+    
+    /* Buttons: Scale down button size and text */
+    button {
+      font-size: 16px;
+      padding: 8px;
+    }
+    
+    /* GitHub Button: Scale down as well */
+    .github-btn {
+      font-size: 16px;
+      padding: 8px;
+    }
+  }
+  

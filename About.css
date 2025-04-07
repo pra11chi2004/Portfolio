@@ -70,7 +70,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 2rem;
     transition: color 0.3s ease-in-out;
 }
 
@@ -304,3 +304,54 @@ footer {
         font-size: 1.5rem;
     }
 }
+/* Global adjustments for very small devices (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Adjust overall page typography and spacing */
+    body {
+      font-size: 0.85rem;
+      padding: 5px;
+    }
+    
+    /* Reduce header padding and scale down the main title */
+    header {
+      padding: 10px 5%;
+    }
+    header h1 {
+      font-size: 1.5rem;
+    }
+    
+    /* Adjust navigation layout for easier tapping */
+    nav ul {
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+    }
+    nav ul li a {
+      font-size: 1.5rem;
+    }
+    
+    /* Reduce padding for sections to maximize screen real estate */
+    .about-section,
+    .stats-section,
+    footer {
+      padding: 10px;
+    }
+    
+    /* Optionally, adjust container widths if needed */
+    .about-container {
+      padding: 0 10px;
+    }
+    
+    /* Ensure that images and boxes remain well sized */
+    .about-container img {
+      width: 100%;
+      max-width: 200px;
+    }
+    
+    /* You can also reduce the gap between social icons if you have any */
+    .social-icons a {
+      font-size: 1.5rem;
+      margin: 5px;
+    }
+  }
+  
